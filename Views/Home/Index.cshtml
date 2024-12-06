@@ -8,7 +8,7 @@
 <div class="text-center">
     @if (User.Identity!.IsAuthenticated)
     {
-        <h1 class="display-4" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Bienvenido
+        <h1 class="display-4 mt-3" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Bienvenido
             @User.Claims.Where(c=>c.Type == ClaimTypes.Name).Select(c=>c.Value).SingleOrDefault()
         </h1>
     }

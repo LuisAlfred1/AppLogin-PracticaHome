@@ -12,38 +12,84 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AppLogin</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container">
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">Mi sitio <i class="bi bi-house"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Salir">Salir</a>
+                            <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
+                    <button class="btn btn-custom ms-3">
+                        <a class="nav-link text" asp-area="" asp-controller="Home" asp-action="Salir">Cerrar sesión</a>
+                    </button>
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody()
+@RenderBody()
         </main>
     </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
+
+<style>
+    /* Fondo degradado */
+    .navbar-custom {
+        background: linear-gradient(90deg, #4caf50, #2e7d32);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    /* Enlaces con transición */
+    .navbar-custom .nav-link {
+        color: white;
+        transition: color 0.3s ease-in-out, transform 0.2s ease;
+    }
+
+    .navbar-custom .nav-link:hover {
+        color: #c8e6c9;
+    }
+
+    /* Botón personalizado */
+    .btn-custom {
+        background-color: #66bb6a;
+        color: white;
+        border: none;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .btn-custom:hover {
+        background-color: #388e3c;
+        color: white;
+    }
+
+    /* Ícono personalizado para el toggler */
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-toggler-icon {
+        width: 24px;
+        height: 24px;
+        background: url('https://cdn-icons-png.flaticon.com/512/1828/1828859.png') no-repeat center;
+        background-size: cover;
+    }
+</style>
