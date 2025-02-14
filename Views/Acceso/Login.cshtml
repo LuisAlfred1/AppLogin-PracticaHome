@@ -5,61 +5,103 @@
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="container mt-5">
-        
-        <form asp-controller="Acceso" asp-action="Login" method="post" id="formulario" class="p-4 rounded shadow mx-auto" style="max-width: 400px;">
-            <div class="text-center mb-4">
-                <h3>Usuario <i class="bi bi-person-fill"></i></h3>
-            </div>
-            <input class="form-control mb-3" type="text" placeholder="Correo" asp-for="Correo" required />
-            <input class="form-control mb-3" type="password" placeholder="Contraseña" asp-for="Clave" required />
-            <div class="d-grid gap-2 mb-3">
-                <button class="btn text-white" type="submit">Iniciar sesión</button>
-            </div>
-
-            @if (ViewData["Mensaje"] != null)
-            {
-                <div class="alert alert-danger">
-                    @ViewData["Mensaje"]
-                </div>
-            }
-
+    <div class="container-fluid vh-100 d-flex">
+        <div class="col-md-6 bg-white d-flex align-items-center justify-content-center">
             <div class="text-center">
-                ¿No tienes cuenta? <a asp-controller="Acceso" style="color:white; font-weight:350;" asp-action="Registrarse">Registrate ya!</a>
+                <i class="bi bi-twitch" style="font-size: 150px;"></i>
+                <h1 class="fw-bold">Evernote</h1>
             </div>
-        </form>
+        </div>
+        <div class="col-md-6 login-section d-flex align-items-center justify-content-center">
+            <form asp-controller="Acceso" asp-action="Login" method="post" id="formulario" class="p-4 rounded shadow">
+                <div class="text-center mb-3">
+                    <h3 class="title">Iniciar Sesión <i class="bi bi-person-fill"></i></h3>
+                </div>
+                <hr />
+                <label class="form-label">Correo</label>
+                <input class="form-control mb-3 input-field" type="text" placeholder="Ingresa tu correo" asp-for="Correo" required />
+                <label class="form-label">Contraseña</label>
+                <input class="form-control mb-3 input-field" type="password" placeholder="******" asp-for="Clave" required />
+                <div class="d-grid gap-2 mb-3">
+                    <button class="btn text-white">Iniciar sesión</button>
+                </div>
+                @if (ViewData["Mensaje"] != null)
+                {
+                    <div class="alert alert-danger">@ViewData["Mensaje"]</div>
+                }
+                <div class="text-center">
+                    ¿No tienes cuenta? <a asp-controller="Acceso" asp-action="Registrarse">Regístrate aquí</a>
+                </div>
+            </form>
+        </div>
     </div>
-
 </body>
 
-
-
 <style>
-
-
     body {
-        /*background-image: radial-gradient(circle at 0% 0%, #98a5ff 0, #486ee5 50%, #003a8b 100%);*/
-        /*background-image: linear-gradient(25deg, #9df08c 0, #8de98e 16.67%, #7ce18f 33.33%, #6cd890 50%, #5ccf90 66.67%, #4cc691 83.33%, #3cbf91 100%);*/
-        background: linear-gradient(135deg, #2a6d46, #4b9e68);
+        font-family: 'Poppins', sans-serif;
     }
 
-    .container {
-        animation: presentacion 0.6s ease-out;
+    .login-section {
+        background: linear-gradient(135deg, #1b3c4f, #00a86b);
+        color: white;
     }
 
-    #formulario{
-        background: rgba(255,255,255,.4);
-        backdrop-filter: blur(20px);
+    #formulario {
+        width: 380px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(15px);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
-    .btn{
-        background: #00986c;
+
+    .title {
+        font-weight: 600;
+    }
+
+    .btn {
+        background: #00a86b;
         border: none;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
     }
-    .btn:hover{
-        background:#2ca880;
-        border:none;
+
+        .btn:hover {
+            background: #00c77b;
+            box-shadow: 0 5px 15px rgba(0, 200, 122, 0.5);
+        }
+
+    .input-field {
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        padding: 10px;
+        border-radius: 8px;
+        color: white;
+    }
+
+        .input-field::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .input-field:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+    a {
+        color: white;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
     }
 </style>

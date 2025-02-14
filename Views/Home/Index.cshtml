@@ -3,21 +3,21 @@
     ViewData["Title"] = "Home Page";
 }
 
-
-
-<div class="text-center">
+<div class="text-center mt-5">
     @if (User.Identity!.IsAuthenticated)
     {
-        <h1 class="display-4 mt-3" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Bienvenido
-            @User.Claims.Where(c=>c.Type == ClaimTypes.Name).Select(c=>c.Value).SingleOrDefault()
+        var hora = DateTime.Now.Hour;
+        var saludo = hora < 12 ? "Buenos días" : (hora < 18 ? "Buenas tardes" : "Buenas noches");
+        <h1 class="display-4 mt-3" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            @saludo @User.Claims.Where(c => c.Type == ClaimTypes.Name).Select(c => c.Value).SingleOrDefault()
         </h1>
     }
 </div>
 
+<!--
 <div class="container mt-4">
-    <h3 class="text-center mb-4">Tus proyectos subidos a github <i class="bi bi-github"></i></h3>
     <div class="row">
-        <!-- Tarjeta 1 -->
+        - Tarjeta 1- 
         <div class="col-md-4 mb-3">
             <div class="card shadow-sm">
                 <img src="https://res.cloudinary.com/dmgdrxfar/image/upload/v1733603212/calculadora_sdhddx.png" class="card-img-top" style="height: 300px; object-fit: cover;" alt="Vista previa del proyecto">
@@ -32,7 +32,7 @@
                 </div>
             </div>
         </div>
-        <!-- Tarjeta 2 -->      
+         - Tarjeta 2 -    
         <div class="col-md-4 mb-3">        
             <div class="card shadow-sm">
                 <img src="https://res.cloudinary.com/dmgdrxfar/image/upload/v1733603401/apple-touch-icon-180x180_vpuonc.png" class="card-img-top" style="height: 300px; object-fit: cover;" alt="Vista previa del proyecto">
@@ -41,13 +41,13 @@
                     <p class="card-text">
                         Breve descripción del proyecto. Incluye detalles interesantes o resultados obtenidos.
                     </p>
-                    <a href="https://github.com/tuusuario/proyecto2" class="btn btn-dark" target="_blank">
+                    <a href="https://github.com/LuisAlfred1/ExamenFinalProgra.git" class="btn btn-dark" target="_blank">
                         Ver en GitHub <i class="bi bi-github"></i>
                     </a>
                 </div>
             </div>
         </div>
-        <!-- tarjeta 3 -->
+         - tarjeta 3 -
         <div class="col-md-4 mb-3">
             <div class="card shadow-sm">
                 <img src="ruta-a-tu-imagen-2.png" class="card-img-top" style="height: 300px; object-fit: cover;" alt="Vista previa del proyecto">
@@ -64,6 +64,7 @@
         </div>
     </div>
 </div>
+-->
 
 <style>
     body{

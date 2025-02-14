@@ -10,65 +10,95 @@
 <body>
 
     <div class="container mt-5">
-
-        <form asp-controller="Acceso" asp-action="Registrarse" method="post" id="formulario" class="p-4 rounded shadow mx-auto" style="max-width: 400px;">
-            <div class="text-center mb-4">
-                <h3>Registrate <i class="bi bi-person-add"></i></h3>
+        <form asp-controller="Acceso" asp-action="Registrarse" method="post" id="formulario" class="p-4 rounded shadow mx-auto">
+            <div class="text-center text-white mb-4">
+                <h3 class="fw-bold">Regístrate <i class="bi bi-person-add"></i></h3>
             </div>
-            <input class="form-control mb-3" type="text" placeholder="Nombre completo" asp-for="NombreCompleto" required />
-            <input class="form-control mb-3" type="text" placeholder="Correo" asp-for="Correo" required />
-            <input class="form-control mb-3" type="password" placeholder="Contraseña" asp-for="Clave" required />
-            <input class="form-control mb-3" type="password" placeholder="Confirmar contraseña" asp-for="ConfirmarClave" required />
-            <div class="d-grid gap-2 mb-3">
+            <hr />
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Nombre Completo</label>
+                <input class="form-control" type="text" placeholder="Juan Pérez" asp-for="NombreCompleto" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Correo Electrónico</label>
+                <input class="form-control" type="email" placeholder="correo@ejemplo.com" asp-for="Correo" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Contraseña</label>
+                <input class="form-control" type="password" placeholder="*******" asp-for="Clave" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-semibold">Confirmar Contraseña</label>
+                <input class="form-control" type="password" placeholder="*******" asp-for="ConfirmarClave" required />
+            </div>
+            <div class="d-grid gap-2">
                 <button class="btn text-white" type="submit">Registrarse</button>
             </div>
 
             @if (ViewData["Mensaje"] != null)
             {
-                <div class="alert alert-danger">
+                <div class="alert alert-danger mt-3">
                     @ViewData["Mensaje"]
                 </div>
             }
 
-            <div class="text-center">
-                ¿Ya tienes cuenta? <a asp-controller="Acceso" style="color:white; font-weight:350;" asp-action="Login">Inicia sesión!</a>
+            <div class="text-center mt-3">
+                ¿Ya tienes cuenta? <a asp-controller="Acceso" asp-action="Login" class="text-white fw-bold">Inicia sesión!</a>
             </div>
         </form>
     </div>
 
 </body>
 
-
-
 <style>
-
-
     body {
-        /*background-image: radial-gradient(circle at 0% 0%, #98a5ff 0, #486ee5 50%, #003a8b 100%);*/
-        background: linear-gradient(135deg, #2a6d46, #4b9e68);
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1b3c4f, #00a86b);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 95vh;
+        margin: 0;
     }
 
     .container {
-        animation: presentacion 0.6s ease-out;
+        animation: fadeIn 0.6s ease-out;
     }
 
     #formulario {
-        background: rgba(255,255,255,.4);
+        max-width: 400px;
+        background: rgba(255,255,255,.2);
         backdrop-filter: blur(20px);
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .btn {
-        background: #00986c;
+        background: #00a86b;
         border: none;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease-in-out;
     }
 
     .btn:hover {
-        background: #2ca880;
-        border: none;
+        background: #00c77b;
+        box-shadow: 0 5px 15px rgba(0, 200, 122, 0.5);
+    }
+
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 </style>
-
-
 
 @section Scripts {
     @{
