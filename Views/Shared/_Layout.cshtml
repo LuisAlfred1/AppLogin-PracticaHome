@@ -83,15 +83,13 @@
                 <button class="btn-toggle" aria-expanded="false" onclick="toggleSidebar()">☰</button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Evernote</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li> 
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                        
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <!-- Menú desplegable de configuración -->
+                        <div class="nav-item dropdown">
+                            <a class="btn btn-light me-2 dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-gear"></i>
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
@@ -99,10 +97,8 @@
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <a class="btn btn-light me-2"><i class="bi bi-gear"></i></a>
+                        </div>
+
                         <a class="btn btn-light me-2"><i class="bi bi-bell"></i></a>
                         <a class="btn btn-success" asp-controller="Home" asp-action="Salir"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</a>
                     </form>
@@ -112,12 +108,15 @@
     </header>
 
     <aside id="sidebar" class="sidebar">
-        <h5 class="text-center text-white"><i class="bi bi-twitch"></i></h5>
+        <h5 class="text-center text-white"><i class="bi bi-person-fill" style="font-size:30px;"></i></h5>
+        <hr style="color:white;"/>
         <a asp-controller="Home" asp-action="Index"><i class="bi bi-house mt-2"></i> <span>Inicio</span></a>
         <a asp-controller="Tareas" asp-action="Index"><i class="bi bi-list-task"></i> <span>Tareas</span></a>
         <a asp-controller="Notas" asp-action="Index"><i class="bi bi-sticky"></i> <span>Notas</span></a>
         <a asp-controller="Eventos" asp-action="Index"><i class="bi bi-calendar-check"></i> <span>Eventos</span></a>
+        <!--
         <a asp-controller="Home" asp-action="Privacy"><i class="bi bi-gear"></i> <span>Soporte</span></a>
+        -->
     </aside>
 
     <main id="content" class="content">

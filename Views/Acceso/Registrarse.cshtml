@@ -14,21 +14,21 @@
             <div class="text-center text-white mb-4">
                 <h3 class="fw-bold">Regístrate <i class="bi bi-person-add"></i></h3>
             </div>
-            <hr />
+            <hr style="color:white;"/>
             <div class="mb-3">
-                <label class="form-label fw-semibold">Nombre Completo</label>
+                <label class="form-label ">Nombre Completo</label>
                 <input class="form-control" type="text" placeholder="Juan Pérez" asp-for="NombreCompleto" required />
             </div>
             <div class="mb-3">
-                <label class="form-label fw-semibold">Correo Electrónico</label>
+                <label class="form-label ">Correo Electrónico</label>
                 <input class="form-control" type="email" placeholder="correo@ejemplo.com" asp-for="Correo" required />
             </div>
             <div class="mb-3">
-                <label class="form-label fw-semibold">Contraseña</label>
+                <label class="form-label ">Contraseña</label>
                 <input class="form-control" type="password" placeholder="*******" asp-for="Clave" required />
             </div>
             <div class="mb-3">
-                <label class="form-label fw-semibold">Confirmar Contraseña</label>
+                <label class="form-label ">Confirmar Contraseña</label>
                 <input class="form-control" type="password" placeholder="*******" asp-for="ConfirmarClave" required />
             </div>
             <div class="d-grid gap-2">
@@ -97,6 +97,10 @@
             opacity: 1;
             transform: translateY(0);
         }
+    }
+    .form-label{
+        color: white;
+        font-family: 'Poppins', sans-serif;
     }
 </style>
 

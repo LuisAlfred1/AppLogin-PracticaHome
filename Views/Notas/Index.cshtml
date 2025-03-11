@@ -1,1 +1,107 @@
-﻿
+﻿<div class="container mt-5">
+    <div class="row g-4">
+        <div class="col-md-3">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <button id="addFolderBtn" class="btn btn-success carpBoton">
+                        Agregar nota <i class="bi bi-journal-text"></i>
+                    </button>
+                    <hr />
+                    <h3 id="tituloNota"></h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenedor de archivos -->
+        <div class="col-md-9">
+            <div class="card h-100">
+                <div class="d-flex justify-content-end card-header text-white">
+                    <div class="me-auto p-3">Nota 1</div>
+                    <a href="" class="text-white"><i class="bi bi-paperclip fs-2 me-2"></i></a>
+                    <i class="bi bi-journal-bookmark-fill fs-2 me-2"></i>
+                </div>
+                <div class="card-body">
+                    <div id="fileContainer">Escribe algo...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/nota.js"></script>
+<script>
+    document.getElementById("addFolderBtn").addEventListener("click", function () {
+        let tituloNota = document.getElementById("tituloNota");
+
+        // Crear un contenedor para la nota
+        let notaContainer = document.createElement("div");
+        notaContainer.className = "mb-2"; // Margen entre notas
+
+        let input = document.createElement("input");
+        input.type = "text";
+        input.className = "form-control";
+        input.placeholder = "Ingresa el título de la nota";
+
+        // Evento para guardar el título al presionar Enter
+        input.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                guardarTitulo(input, notaContainer);
+            }
+        });
+
+        // Evento para guardar el título al perder el foco
+        input.addEventListener("blur", function () {
+            guardarTitulo(input, notaContainer);
+        });
+
+        notaContainer.appendChild(input);
+        tituloNota.appendChild(notaContainer);
+        input.focus();
+    });
+
+    function guardarTitulo(input, container) {
+        let titulo = input.value.trim();
+
+        if (titulo !== "") {
+            let tituloElemento = document.createElement("h5");
+            tituloElemento.className = "mt-2";
+            tituloElemento.textContent = titulo;
+
+            container.innerHTML = ""; // Limpiar el contenedor
+            container.appendChild(tituloElemento); // Agregar el título
+        } else {
+            container.remove(); // Eliminar la nota si está vacía
+        }
+    }
+</script>
+
+<style>
+    body {
+        background-color: #ffff;
+        background-size: cover;
+        justify-content: center;
+    }
+
+    .card {
+        background: rgba(255,255,255,.5);
+        backdrop-filter: blur(20px);
+        border-radius: 30px;
+        border: none;
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, #00a86b,#1b3c4f);
+        backdrop-filter: blur(20px);
+        border-radius: 30px;
+        border: none;
+    }
+    
+    .carpBoton {
+        width: 200px;
+    }
+
+    #tituloNota{
+        cursor: pointer;
+    }
+
+</style>

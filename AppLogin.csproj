@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Include="wwwroot\images\galaxia.jpg" />
     <None Include="wwwroot\images\Pixel.jpg" />
+    <None Include="wwwroot\js\appTarea.js" />
   </ItemGroup>
 
   <ItemGroup>
