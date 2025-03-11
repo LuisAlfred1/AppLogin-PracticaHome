@@ -2,16 +2,67 @@
     background-color: #ffff;
 }
 
-.titulo-tareas {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 28px;
-    font-weight: bold;
-    color: black; /* Azul Bootstrap */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    border-bottom: 2px solid green;
-    padding-bottom: 5px;
-    display: inline-block;
+/* Estilo base para las tarjetas */
+.tarea-card {
+    background: #fff; /* Fondo blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Efecto al pasar el mouse */
+.tarea-card:hover {
+    transform: translateY(-5px); /* Desplaza la tarjeta hacia arriba */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+/* Títulos más destacados */
+.tarea-card h5 {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Descripción */
+.tarea-card p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Fecha */
+.tarea-card .fecha-limite {
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Estilos según la prioridad */
+.prioridad-alta {
+    border-left: 8px solid #e74c3c; /* Rojo fuerte */
+}
+
+.prioridad-media {
+    border-left: 8px solid #f39c12; /* Amarillo */
+}
+
+.prioridad-baja {
+    border-left: 8px solid #2ecc71; /* Verde */
+}
+
+/* Badge de prioridad */
+.badge-prioridad {
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+
+
 
 .task-filter {
     background-color: white;

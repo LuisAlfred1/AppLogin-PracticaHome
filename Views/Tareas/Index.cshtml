@@ -124,32 +124,25 @@
 
     function getColorPrioridad(prioridad) {
         switch (prioridad) {
-            case "Alta": return "danger"; // Rojo
-            case "Media": return "warning"; // Amarillo
-            case "Baja": return "success"; // Verde
-            default: return "secondary"; // Gris
+            case "Alta": return "prioridad-alta";
+            case "Media": return "prioridad-media";
+            case "Baja": return "prioridad-baja";
+            default: return "";
         }
     }
-
 
     function agregarTarea(titulo, descripcion, fechaLimite, prioridad) {
         const listaTareas = document.getElementById("listaTareas");
 
-        // Crear el elemento de la tarjeta
         const card = document.createElement("div");
-        card.classList.add("col-md-4"); // Hace que las tarjetas sean responsivas
+        card.classList.add("tarea-card", getColorPrioridad(prioridad));
 
-        // Definir el contenido de la tarjeta con Bootstrap
         card.innerHTML = `
-            <div class="card border-${getColorPrioridad(prioridad)} shadow-sm">
-                <div class="card-body">
-                    <h5 class="card-title">${titulo}</h5>
-                    <p class="card-text">${descripcion}</p>
-                    <p class="text-muted">Fecha Límite: <strong>${fechaLimite}</strong></p>
-                    <span class="badge bg-${getColorPrioridad(prioridad)}">${prioridad}</span>
-                    <button class="btn btn-danger btn-sm mt-2 eliminar-tarea">Eliminar</button>
-                </div>
-            </div>
+            <h5><i class="bi bi-list-task"></i> ${titulo}</h5>
+            <p>${descripcion}</p>
+            <p><i class="bi bi-calendar2-week"></i> Fecha Límite: <strong>${fechaLimite}</strong></p>
+            <button class="btn btn-success"><i class="bi bi-check2"></i></button>
+            <button class="btn btn-danger eliminar-tarea"><i class="bi bi-archive"></i></button>
         `;
 
         // Agregar la tarjeta al contenedor de tareas
