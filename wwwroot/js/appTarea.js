@@ -18,13 +18,12 @@
 
 function getColorPrioridad(prioridad) {
     switch (prioridad) {
-        case "Alta": return "danger"; // Rojo
+        case "Alta": return "danger";  // Rojo
         case "Media": return "warning"; // Amarillo
         case "Baja": return "success"; // Verde
-        default: return "secondary"; // Gris
+        default: return ""; // ningun color
     }
 }
-
 
 function agregarTarea(titulo, descripcion, fechaLimite, prioridad) {
     const listaTareas = document.getElementById("listaTareas");
@@ -33,15 +32,19 @@ function agregarTarea(titulo, descripcion, fechaLimite, prioridad) {
     const card = document.createElement("div");
     card.classList.add("col-md-4"); // Hace que las tarjetas sean responsivas
 
-    // Definir el contenido de la tarjeta con Bootstrap
+    // Definir el contenido de la tarjeta con Bootstrap mejorado
     card.innerHTML = `
-        <div class="card border-${getColorPrioridad(prioridad)} shadow-sm">
+        <div class="card border-${getColorPrioridad(prioridad)} shadow-lg rounded">
             <div class="card-body">
-                <h5 class="card-title">${titulo}</h5>
-                <p class="card-text">${descripcion}</p>
-                <p class="text-muted">Fecha Límite: <strong>${fechaLimite}</strong></p>
-                <span class="badge bg-${getColorPrioridad(prioridad)}">${prioridad}</span>
-                <button class="btn btn-danger btn-sm mt-2 eliminar-tarea">Eliminar</button>
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="card-title"><i class="fas fa-tasks"></i> ${titulo}</h5>
+                    <span class="badge bg-${getColorPrioridad(prioridad)}">${prioridad}</span>
+                </div>
+                <p class="card-text text-muted">${descripcion}</p>
+                <p class="text-muted"><i class="far fa-calendar-alt"></i> Fecha Límite: <strong>${fechaLimite}</strong></p>
+                <div class="d-flex justify-content-between">
+                    <button class="btn btn-danger btn-sm eliminar-tarea"><i class="fas fa-trash"></i> Eliminar</button>
+                </div>
             </div>
         </div>
     `;
