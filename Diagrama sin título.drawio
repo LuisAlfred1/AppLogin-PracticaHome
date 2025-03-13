@@ -242,8 +242,17 @@
         <mxCell id="RXg9fFN52jrWRGp2dkTv-61" value="DIAGRAMA DE COMPONENTES - ORGANIZADOR DIGITAL" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="948.5" y="410" width="380" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RXg9fFN52jrWRGp2dkTv-62" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1784" y="525" width="20" height="20" as="geometry" />
+        <mxCell id="RXg9fFN52jrWRGp2dkTv-64" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1610" y="560" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RXg9fFN52jrWRGp2dkTv-65" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1176" y="560" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RXg9fFN52jrWRGp2dkTv-67" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="920" y="562" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="RXg9fFN52jrWRGp2dkTv-68" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="640" y="560" width="20" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
