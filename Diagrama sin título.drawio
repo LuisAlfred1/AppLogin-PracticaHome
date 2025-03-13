@@ -239,13 +239,11 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="RXg9fFN52jrWRGp2dkTv-58" value="&amp;laquo;Annotation&amp;raquo;&lt;br/&gt;&lt;b&gt;Component&lt;/b&gt;" style="html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1027" y="250" width="180" height="90" as="geometry" />
+        <mxCell id="RXg9fFN52jrWRGp2dkTv-61" value="DIAGRAMA DE COMPONENTES - ORGANIZADOR DIGITAL" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1020" y="410" width="380" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="RXg9fFN52jrWRGp2dkTv-59" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="RXg9fFN52jrWRGp2dkTv-58">
-          <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
-            <mxPoint x="-27" y="7" as="offset" />
-          </mxGeometry>
+        <mxCell id="RXg9fFN52jrWRGp2dkTv-62" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1900" y="530" width="20" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
