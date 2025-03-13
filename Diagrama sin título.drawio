@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.0">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="1400" dy="575" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1723" dy="708" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -16,8 +16,8 @@
         <mxCell id="RXg9fFN52jrWRGp2dkTv-3" value="Controladores" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="120" y="674" width="1552" height="128" as="geometry" />
         </mxCell>
-        <mxCell id="RXg9fFN52jrWRGp2dkTv-4" value="                                                                INTERFAZ DE USUARIO" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="447" y="520" width="1484" height="104" as="geometry" />
+        <mxCell id="RXg9fFN52jrWRGp2dkTv-4" value="                                                                                                        INTERFAZ DE USUARIO" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="440" y="520" width="1380" height="104" as="geometry" />
         </mxCell>
         <mxCell id="RXg9fFN52jrWRGp2dkTv-5" value="Módulo de Tareas" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="482" y="545" width="183" height="54" as="geometry" />
@@ -79,7 +79,7 @@
         <mxCell id="RXg9fFN52jrWRGp2dkTv-25" value="Repositorio de Usuarios" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1557" y="1160" width="227" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="RXg9fFN52jrWRGp2dkTv-26" value="Gestor de Archivos" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="RXg9fFN52jrWRGp2dkTv-26" value="Gestor de Archivos jpg,png" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1449" y="1314" width="193" height="54" as="geometry" />
         </mxCell>
         <mxCell id="RXg9fFN52jrWRGp2dkTv-27" value="Motor de Recordatorios" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
@@ -91,7 +91,7 @@
         <mxCell id="RXg9fFN52jrWRGp2dkTv-29" value="Base de Datos" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1196" y="1455" width="160" height="54" as="geometry" />
         </mxCell>
-        <mxCell id="RXg9fFN52jrWRGp2dkTv-30" value="Almacenamiento de Archivos" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="RXg9fFN52jrWRGp2dkTv-30" value="Almacenamiento de Archivos jpg, png" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1416" y="1443" width="260" height="78" as="geometry" />
         </mxCell>
         <mxCell id="RXg9fFN52jrWRGp2dkTv-31" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="RXg9fFN52jrWRGp2dkTv-5" target="RXg9fFN52jrWRGp2dkTv-10">
@@ -240,10 +240,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="RXg9fFN52jrWRGp2dkTv-61" value="DIAGRAMA DE COMPONENTES - ORGANIZADOR DIGITAL" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1020" y="410" width="380" height="30" as="geometry" />
+          <mxGeometry x="948.5" y="410" width="380" height="30" as="geometry" />
         </mxCell>
         <mxCell id="RXg9fFN52jrWRGp2dkTv-62" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1900" y="530" width="20" height="20" as="geometry" />
+          <mxGeometry x="1784" y="525" width="20" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
