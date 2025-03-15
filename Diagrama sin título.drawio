@@ -7,20 +7,20 @@
         <mxCell id="RXg9fFN52jrWRGp2dkTv-61" value="DIAGRAMA DE COMPONENTES - ORGANIZADOR DIGITAL" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1086" y="180" width="380" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="cwTOPx6Zc4xETRU_-IwT-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="cwTOPx6Zc4xETRU_-IwT-5" target="cwTOPx6Zc4xETRU_-IwT-41">
+        <mxCell id="cwTOPx6Zc4xETRU_-IwT-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="cwTOPx6Zc4xETRU_-IwT-5" target="cwTOPx6Zc4xETRU_-IwT-41">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="cwTOPx6Zc4xETRU_-IwT-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="cwTOPx6Zc4xETRU_-IwT-5" target="cwTOPx6Zc4xETRU_-IwT-37">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="cwTOPx6Zc4xETRU_-IwT-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="cwTOPx6Zc4xETRU_-IwT-5" target="cwTOPx6Zc4xETRU_-IwT-39">
+        <mxCell id="cwTOPx6Zc4xETRU_-IwT-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="cwTOPx6Zc4xETRU_-IwT-5" target="cwTOPx6Zc4xETRU_-IwT-39">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="cwTOPx6Zc4xETRU_-IwT-5" value="Interfaz de Usuario" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="cwTOPx6Zc4xETRU_-IwT-5" value="Modulo de usuario" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="1182.5" y="270" width="197" height="54" as="geometry" />
         </mxCell>
         <mxCell id="cwTOPx6Zc4xETRU_-IwT-11" value="Sistema de Notificaciones" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="982" y="577" width="244" height="54" as="geometry" />
+          <mxGeometry x="1154" y="560" width="244" height="54" as="geometry" />
         </mxCell>
         <mxCell id="cwTOPx6Zc4xETRU_-IwT-13" value="Gestor de Archivos" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="887" y="692" width="193" height="54" as="geometry" />
@@ -43,15 +43,6 @@
               <mxPoint x="1402" y="540" />
             </Array>
             <mxPoint x="1467.0800000000004" y="478" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="cwTOPx6Zc4xETRU_-IwT-25" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.52;exitY=1;entryX=0;entryY=0.34;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="cwTOPx6Zc4xETRU_-IwT-15">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="677" y="502" />
-              <mxPoint x="677" y="655" />
-            </Array>
-            <mxPoint x="670.5999999999999" y="465" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="cwTOPx6Zc4xETRU_-IwT-26" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.47;exitY=1;entryX=0;entryY=0.21;rounded=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="cwTOPx6Zc4xETRU_-IwT-15">
@@ -130,7 +121,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="cwTOPx6Zc4xETRU_-IwT-41" value="Gestor de Calendario" style="html=1;dropTarget=0;whiteSpace=wrap;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1430" y="410" width="150" height="82" as="geometry" />
+          <mxGeometry x="1451" y="410" width="150" height="82" as="geometry" />
         </mxCell>
         <mxCell id="cwTOPx6Zc4xETRU_-IwT-42" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" vertex="1" parent="cwTOPx6Zc4xETRU_-IwT-41">
           <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
