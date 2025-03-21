@@ -15,6 +15,7 @@ namespace AppLogin.Data
         }
 
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Tarea> Tareas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
