@@ -46,13 +46,13 @@
         </div>
     </div>
 
-    <!-- Estado vacío (se muestra cuando no hay tareas)
+
     <div class="empty-state" id="emptyState">
         <i class="bi bi-clipboard-x"></i>
         <h4>No tienes tareas pendientes</h4>
         <p>¡Haz clic en el botón "+" para agregar una nueva tarea!</p>
     </div>
-     -->
+
     <!-- Boton flotante -->
     <button class="btn btn-floating btn-success" data-bs-toggle="modal" data-bs-target="#modalTarea">
         <i class="bi bi-plus"></i>
@@ -122,6 +122,16 @@
         document.getElementById("formTarea").reset();
     });
 
+    function actulizarEstadoVacio(){
+        const listaTareas = document.getElementById("listaTareas");
+        const emptyState = document.getElementById("emptyState");
+        if (listaTareas.children.length > 0) {
+            emptyState.style.display = "none";
+        } else {
+            emptyState.style.display = "block";
+        }
+    }
+
     function getColorPrioridad(prioridad) {
         switch (prioridad) {
             case "Alta": return "prioridad-alta";
@@ -148,11 +158,16 @@
         // Agregar la tarjeta al contenedor de tareas
         listaTareas.appendChild(card);
 
+        actulizarEstadoVacio()
+
         // Agregar evento al botón de eliminar
         card.querySelector(".eliminar-tarea").addEventListener("click", function () {
             card.remove(); // Elimina la tarea
+            actulizarEstadoVacio()
         });
     }
+    actulizarEstadoVacio()
+
 </script>
 
 

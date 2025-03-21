@@ -21,7 +21,9 @@
                     <i class="bi bi-journal-bookmark-fill fs-2 me-2"></i>
                 </div>
                 <div class="card-body">
-                    <div id="fileContainer">Escribe algo...</div>
+                    <div id="fileContainer" contenteditable="true" class="notaEditable">
+                        Escribe algo...
+                    </div>
                 </div>
             </div>
         </div>
@@ -73,6 +75,30 @@
             container.remove(); // Eliminar la nota si está vacía
         }
     }
+        document.addEventListener("DOMContentLoaded", function () {
+        let fileContainer = document.getElementById("fileContainer");
+
+        // Mantener un marcador de posición si el usuario borra todo
+        fileContainer.addEventListener("input", function () {
+            if (fileContainer.textContent.trim() === "") {
+                fileContainer.innerHTML = "Escribe algo...";
+            }
+        });
+
+        // Eliminar marcador de posición cuando el usuario empieza a escribir
+        fileContainer.addEventListener("focus", function () {
+            if (fileContainer.textContent.trim() === "Escribe algo...") {
+                fileContainer.innerHTML = "";
+            }
+        });
+
+        // Restaurar marcador de posición si se vacía y pierde el foco
+        fileContainer.addEventListener("blur", function () {
+            if (fileContainer.textContent.trim() === "") {
+                fileContainer.innerHTML = "Escribe algo...";
+            }
+        });
+    });
 </script>
 
 <style>
@@ -102,6 +128,19 @@
 
     #tituloNota{
         cursor: pointer;
+    }
+
+    .notaEditable {
+        min-height: 400px;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        outline: none;
+        font-size: 16px;
+        white-space: pre-wrap; /* Mantiene saltos de línea */
+    }
+
+    .notaEditable:focus {
+        background: rgba(255, 255, 255, 1);
     }
 
 </style>
